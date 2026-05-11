@@ -2,7 +2,7 @@
 <idea-plugin>
     <id>com.monkey.UltraCommentRemover</id>
     <name>UltraCommentRemover</name>
-    <vendor url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor>MonkeyMoon104</vendor>
     <description><![CDATA[
         Removes PSI-detected comments recursively from source files selected in the Project View.
     ]]></description>
