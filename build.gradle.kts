@@ -21,7 +21,7 @@ dependencies {
     testImplementation(libs.junit)
 
     intellijPlatform {
-        intellijIdeaCommunity("2024.3")
+        intellijIdea("2025.3.4.1")
 
         testFramework(TestFrameworkType.Platform)
     }
@@ -35,8 +35,9 @@ intellijPlatform {
     pluginConfiguration {
         ideaVersion {
             sinceBuild = "243"
-
-            untilBuild = ""
         }
+    }
+    publishing {
+        token = providers.gradleProperty("intellijPublishToken")
     }
 }
