@@ -1,0 +1,28 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.monkey.UltraCommentRemover</id>
+    <name>UltraCommentRemover</name>
+    <vendor url="https://www.yourcompany.com">YourCompany</vendor>
+    <description><![CDATA[
+        Removes PSI-detected comments recursively from source files selected in the Project View.
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup
+                id="UltraCommentRemover"
+                displayType="BALLOON"
+                isLogByDefault="false"/>
+    </extensions>
+
+    <actions>
+        <action
+                id="com.monkey.actions.RemoveCommentsAction"
+                class="com.monkey.actions.RemoveCommentsAction"
+                icon="/icons/removeComments.svg"
+                text="Remove Comments"
+                description="Remove PSI-detected comments from the selected file or directory">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
