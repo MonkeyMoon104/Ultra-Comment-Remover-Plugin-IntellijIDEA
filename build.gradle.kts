@@ -21,7 +21,6 @@ dependencies {
     testImplementation(libs.junit)
 
     intellijPlatform {
-        // TARGET: IntelliJ IDEA base stabile moderna
         intellijIdeaCommunity("2024.3")
 
         testFramework(TestFrameworkType.Platform)
@@ -35,10 +34,8 @@ kotlin {
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            // minimum supported version (IMPORTANT)
             sinceBuild = "243"
 
-            // allow future minor/patch versions
             untilBuild = ""
         }
     }
