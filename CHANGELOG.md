@@ -2,6 +2,9 @@
 
 # UltraCommentRemover Changelog
 
-## [Unreleased]
+## 1.0.0
 
-- Added the recursive `Remove Comments` Project View action backed by IntelliJ PSI.
+- Recursive comment removal
+- PSI-safe processing
+- Multi-language support
+- Project View integration

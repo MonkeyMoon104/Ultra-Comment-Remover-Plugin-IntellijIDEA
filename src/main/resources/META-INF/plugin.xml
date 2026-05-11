@@ -1,11 +1,25 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.monkey.UltraCommentRemover</id>
-    <name>UltraCommentRemover</name>
-    <vendor>MonkeyMoon104</vendor>
+    <id>com.monkey.ultracommentremover</id>
+
+    <name>Ultra Comment Remover</name>
+
+    <vendor email="monkeymoon832@gmail.com"
+            url="https://github.com/MonkeyMoon104/Ultra-Comment-Remover-Plugin-IntellijIDEA">
+        MonkeyMoon104
+    </vendor>
+
     <description><![CDATA[
-        Removes PSI-detected comments recursively from source files selected in the Project View.
+        Removes comments recursively from files, folders and entire projects using IntelliJ PSI.
+
+        Features:
+        <ul>
+            <li>Recursive folder/project processing</li>
+            <li>PSI-safe comment removal</li>
+            <li>Multi-language support</li>
+            <li>Project View context menu integration</li>
+        </ul>
     ]]></description>
+
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
@@ -21,8 +35,10 @@
                 class="com.monkey.actions.RemoveCommentsAction"
                 icon="/icons/removeComments.svg"
                 text="Remove Comments"
-                description="Remove PSI-detected comments from the selected file or directory">
-            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+                description="Remove comments recursively">
+            <add-to-group
+                    group-id="ProjectViewPopupMenu"
+                    anchor="last"/>
         </action>
     </actions>
 </idea-plugin>
